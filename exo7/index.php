@@ -6,11 +6,20 @@
   </head>
   <body>
       <?php
-        function conc($lastname, $firstname, $age) {
-            echo 'Bonjour '.$lastname.' '.$firstname.' tu as '.$age.' ans.';
+           
+        function type($age, $gender) {
+            if ($age >=18 and $gender ==='homme') {
+           echo 'Vous êtes un homme et vous êtes majeur';
+        } elseif ($age >=18 and $gender === 'femme') {
+            echo 'Vous êtes une femme et vous êtes majeure';
+        } elseif ($age <18 and $gender ==='homme') {
+            echo 'Vous êtes un homme et vous êtes mineur';
+        } elseif ($age <18 and $gender ==='femme') {
+            echo 'Vous êtes une femme et vous êtes mineure';
+        }
         }
         
-        conc('Dupond','Henri','42');
+        type(17,'femme');
       ?>
   </body>
 </html>
